@@ -12,7 +12,7 @@
       <img src="img/slide/slide1.jpg" class="d-block w-100" >
       <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
         <h1>Selamat Datang</h1>
-        <h4>Di Websaite Resmi Masjid Al-Furqon.</h4>
+        <h4>Di Websaite Resmi Masjid Al-Ishlah</h4>
       </div>
     </div>
     <div class="carousel-item">
