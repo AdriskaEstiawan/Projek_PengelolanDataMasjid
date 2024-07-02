@@ -114,7 +114,12 @@ while($data = mysqli_fetch_assoc($query)) {?>
   </button>
 </div>
       <!-- casosul -->
-  
+      </div>
+  <div class="col-md-6">
+  <h4 class="text-white fw-bold">Video Channel</h4>
+      <a href=""><img src="img/hero.jpg" width="560" height="400" class="rounded"></a>
+  </div>
+</div>
 </section>
 <!-- sarana -->
 
