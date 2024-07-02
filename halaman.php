@@ -45,7 +45,7 @@
       <h3 class="mb-3">Sejarah</h2>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quis eius cum fugit unde aperiam, ad perspiciatis nesciunt ipsa ut rem quasi iure amet aliquam ipsum natus necessitatibus quibusdam autem non adipisci voluptatum quaerat, fugiat sapiente soluta. Delectus quae nostrum ipsum dolore dolorem architecto, doloremque voluptas optio minima temporibus laudantium!</p>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam quis eius cum fugit unde aperiam, ad perspiciatis nesciunt ipsa ut rem quasi iure amet aliquam ipsum natus necessitatibus quibusdam autem non adipisci voluptatum quaerat, fugiat sapiente soluta. Delectus quae nostrum ipsum dolore dolorem architecto, doloremque voluptas optio minima temporibus laudantium!</p>
-      <button class="btn btn-primary text-decoration-underline">Baca Selengkapnya</button>
+      
     </div>
   </div>
 </section>
@@ -114,12 +114,7 @@ while($data = mysqli_fetch_assoc($query)) {?>
   </button>
 </div>
       <!-- casosul -->
-  </div>
-  <div class="col-md-6">
-  <h4 class="text-white fw-bold">Video Channel</h4>
-      <a href=""><img src="img/hero.jpg" width="560" height="400" class="rounded"></a>
-  </div>
-</div>
+  
 </section>
 <!-- sarana -->
 
