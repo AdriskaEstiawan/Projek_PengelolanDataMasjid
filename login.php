@@ -1,15 +1,15 @@
 <?php 
 include "config/koneksi.php";
 session_start();
+
 if(isset($_SESSION['username'])){
   header('Location: home1.php'); 
   exit;
 }
 
 if(isset($_POST['login'])) {
-  
   $user = htmlspecialchars($_POST['user']);
-  $pass = htmlspecialchars($_POST['pass']);
+  $pass = htmlspecialchars($_POST['pass']); // Menggunakan pass bukan Password
 
   $query = $conn->query("SELECT * FROM user WHERE username = '$user' AND password = '$pass'");
 
@@ -18,28 +18,24 @@ if(isset($_POST['login'])) {
     $_SESSION['username'] = $row['username'];
     $_SESSION['foto'] = $row['foto'];
     header('location: home1.php');
-
-  } else{
-    
-    echo "<script>alert('Username atau Password Anda Salah.Silahkan Coba Lagi!');</script>";
+    exit; // Penting untuk menghentikan eksekusi script setelah redirect
+  } else {
+    echo "<script>alert('Username atau Password Anda Salah. Silahkan Coba Lagi!');</script>";
   }
-
 }
-
-
 ?>
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="boostrap/css/style.css">
-    <!-- Bootstrap CSS -->
-    <link href="boostrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="boostrap/css/style.css">
-<title>Halaman Login</title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="boostrap/css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="boostrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="boostrap/css/style.css">
+  <title>Halaman Login</title>
 </head>
 <body>
 
@@ -60,25 +56,28 @@ if(isset($_POST['login'])) {
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <a class="navbar-brand" href="index.php">
-                   <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
-                  </a>
+                      <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
+                    </a>
                   </div>
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan Login</h5>
                   <div class="form-outline mb-4">
-                  <div class="form-floating"> <input id="registerUsername" type="Username" class="form-control"  name="Username"  placeholder="" required> <label for="registerUsername">Username</label> </div>
-                  
+                    <div class="form-floating">
+                      <input id="username" type="text" class="form-control" name="user" placeholder="" required>
+                      <label for="username">Username</label>
+                    </div>
                   </div>
                   <div class="form-outline mb-4">
-                  <div class="form-floating"> <input id="registerPassword" type="password" class="form-control"  name="Password"  placeholder="" required> <label for="registerPassword">Password</label> </div>
-                  
+                    <div class="form-floating">
+                      <input id="password" type="password" class="form-control" name="pass" placeholder="" required>
+                      <label for="password">Password</label>
+                    </div>
                   </div>
                   <div class="d-flex justify-content-end pt-1 mb-4">
-                  <button class="btn btn-primary btn-lg mr-2" type="submit" name="login">Login</button>
-                  <div style="width: 10px;"></div> <!-- Spacer kosong, bisa disesuaikan dengan kebutuhan -->
-                  <a href="index.php" class="btn btn-success btn-lg">Batal</a>
+                    <button class="btn btn-primary btn-lg mr-2" type="submit" name="login">Login</button>
+                    <div style="width: 10px;"></div> <!-- Spacer kosong, bisa disesuaikan dengan kebutuhan -->
+                    <a href="index.php" class="btn btn-success btn-lg">Batal</a>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>
@@ -91,5 +90,5 @@ if(isset($_POST['login'])) {
 
 <script src="boostrap/umd/popper.min.js"></script>
 <script src="boostrap/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
