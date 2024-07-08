@@ -60,7 +60,7 @@ if(isset($_POST['login'])) {
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <a class="navbar-brand" href="#">
-                    <img src="img/sosial/logo.png" style="box-sahdow: 5px 5px "  width="150" height="100">
+                    <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
                   </a>
                   </div>
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan Login</h5>
