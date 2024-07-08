@@ -72,9 +72,10 @@ if(isset($_POST['login'])) {
                   <div class="form-floating"> <input id="registerPassword" type="password" class="form-control"  name="Password"  placeholder="" required> <label for="registerPassword">Password</label> </div>
                   
                   </div>
-                  <div class="pt-1 mb-4">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit" name="login">Login</button>
-                    <a href="index.php" class="btn btn-success btn-lg btn-block">Batal</a>
+                  <div class="d-flex justify-content-end pt-1 mb-4">
+                  <button class="btn btn-primary btn-lg mr-2" type="submit" name="login">Login</button>
+                  <div style="width: 10px;"></div> <!-- Spacer kosong, bisa disesuaikan dengan kebutuhan -->
+                  <a href="index.php" class="btn btn-success btn-lg">Batal</a>
                   </div>
                 </form>
 
