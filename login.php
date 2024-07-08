@@ -60,17 +60,17 @@ if(isset($_POST['login'])) {
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <a class="navbar-brand" href="#">
-                    <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
+                   <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
                   </a>
                   </div>
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan Login</h5>
                   <div class="form-outline mb-4">
-                    <input type="text" id="Username" class="form-control form-control-lg" autofocus required name="user"/>
-                    <label class="form-label" for="Username">Username</label>
+                  <div class="form-floating"> <input id="registerUsername" type="Username" class="form-control"  name="Username"  placeholder="" required> <label for="registerUsername">Username</label> </div>
+                  
                   </div>
                   <div class="form-outline mb-4">
-                    <input type="password" id="password" class="form-control form-control-lg" name="pass" required/>
-                    <label class="form-label" for="password">Password</label>
+                  <div class="form-floating"> <input id="registerPassword" type="password" class="form-control"  name="Password"  placeholder="" required> <label for="registerPassword">Password</label> </div>
+                  
                   </div>
                   <div class="pt-1 mb-4">
                     <button class="btn btn-primary btn-lg btn-block" type="submit" name="login">Login</button>
