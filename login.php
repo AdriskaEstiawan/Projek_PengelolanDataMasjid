@@ -63,7 +63,7 @@ if(isset($_POST['login'])) {
                     <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
                   </a>
                   </div>
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan Login</h5>
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Silahkan Login dulu</h5>
                   <div class="form-outline mb-4">
                     <input type="text" id="Username" class="form-control form-control-lg" autofocus required name="user"/>
                     <label class="form-label" for="Username">Username</label>
