@@ -118,29 +118,7 @@ while($data = mysqli_fetch_assoc($query)) {?>
 </section>
 <!-- sarana -->
 
-<!-- kegiatan -->
-<section id="sarana" class="container mt-5">
-  <div class="row">
-  <h4 class="fw-bold mb-3">Informasi Terkini</h4>
-    
-  <?php 
-  include "config/koneksi.php";
-  $query1 = $conn->query("SELECT * FROM pengumuman ORDER BY tgl DESC");
-  foreach($query1 as $d):
-  ?>
-  <div class=" mx-auto mb-4" style="width: 18rem;">
-    <img src="img/kegiatan/<?= $d['foto']; ?>" class="card-img-top" >
-    <div class="card-body">
-     <a href="frontend/konten.php?id=<?php echo $d['id_pengumuman'] ?>" class="text-black"><p class="card-text fs-5"><?= $d['judul'] ?></p></a>  
-      <p class="card-text"><?= substr($d['isi_pengumuman'],0,100); ?></p>
-      <p class="card-text"><small class="text-muted"><?= date("d/M/Y", strtotime($d['tgl'])); ?></small></p>
-          
-    </div>
-  </div>
-    <?php endforeach; ?>
-  </div>
-</section>
-<!-- kegiatan -->
+
 
 <!-- pengurus -->
 <section class="container mt-5">
