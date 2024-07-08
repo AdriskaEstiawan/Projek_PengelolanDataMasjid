@@ -59,7 +59,7 @@ if(isset($_POST['login'])) {
                 <form action="" method="POST">
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.php">
                    <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
                   </a>
                   </div>
