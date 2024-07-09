@@ -30,7 +30,6 @@
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
             <li><a class="dropdown-item" href="?page=jadwal">Jadwal Kajian</a></li>
-            <li><a class="dropdown-item" href="#">Rekapitulasi kas Masjid</a></li>
             <li><a class="dropdown-item" href="?page=organisasi">Struktur Organisas DKM</a></li>
           </ul>
         </div>
@@ -100,11 +99,13 @@
           <img src="img/sosial/youtube.png" width="40">
         </div>
       </div>
+
       <!-- batas -->
       <div class="col">
         <h4>Q.S At-Taubah: 18</h4>
         <p>“Sesungguhnya yang memakmurkan masjid Allah hanyalah orang-orang yang beriman kepada Allah dan hari akhir, serta (tetap) menegakkan shalat, menunaikan zakat dan tidak takut kecuali hanya kepada Allah. Maka mudah-mudahan mereka termasuk orang-orang yang mendapat petunjuk.”</p>
       </div>
+
       <!-- batas -->
     </div>
   </div>
@@ -112,6 +113,7 @@
     Copyright &copy; 2022 by Al-Furqon
   </div>
 </footer>
+
 <!-- about -->
 <script src="boostrap/umd/popper.min.js"></script>
 <script src="boostrap/js/bootstrap.min.js"></script>
