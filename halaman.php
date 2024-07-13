@@ -133,7 +133,7 @@ while($data = mysqli_fetch_assoc($query)) {?>
       <div class="card-body">
         <h4 class="card-title">Pengurus</h4>
         <p class="card-text">Gambar bersama dengan pengurus DKM masjid Al-Furqon.</p>
-        <a href="?page=organisasi" class="btn btn-primary text-decoration-underline">Struktur Pengurus</a>
+        <a href="?page=organisasi" class="btn btn-primary text-decoration">Struktur Pengurus</a>
         <p class="card-text"><small class="text-muted">12/Aug/2022</small></p>
       </div>
     </div>
