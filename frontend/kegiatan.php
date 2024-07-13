@@ -18,7 +18,7 @@
             <div class="col-md-8">
             <div class="card-body">
                 <p class="text-success fw-bold">KEGIATAN</p>
-                <a href="frontend/konten.php?id=<?php echo $data['id_pengumuman'] ?>" class="text-success"><p class="card-text fs-5"><?= $data['judul'] ?></p></a>  
+                <a href="frontend/konten.php?id=<?php echo $data['id_pengumuman'] ?>" class="text-success"><p class="btn btn-primary text-decoration"><?= $data['judul'] ?></p></a>  
                 <p class="card-text"><?= substr($data['isi_pengumuman'],0,100); ?></p>
                 <p class="card-text"><small class="text-muted"><?= date("d/M/Y", strtotime($data['tgl'])); ?></small></p>
             </div>
