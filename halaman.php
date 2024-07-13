@@ -7,13 +7,25 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/slide/slide1.jpg" class="d-block w-100" >
-      <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle">
-        <h1>Selamat Datang</h1>
-        <h4>Di Websaite Resmi Masjid Al-Ishlah</h4>
-      </div>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Tambahkan link ke Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400;700&display=swap">
+    <style>
+        /* Tambahkan aturan CSS untuk font baru */
+        .custom-font {
+            font-family: 'Pacifico', serif;
+        }
+    </style>
+   <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/slide/slide1.jpg" class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block position-absolute top-50 start-50 translate-middle custom-font">
+                <h1>Selamat Datang</h1>
+                <h4>Di Websaite Resmi Masjid <b>Al-Furqon</b></h4>
+            </div>
+        </div>
     </div>
     <div class="carousel-item">
       <img src="img/slide/slide2.jpg" class="d-block w-100" >
