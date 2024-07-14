@@ -64,55 +64,68 @@
 <!-- sejarah -->
 
 <!-- sarana -->
-<section id="pengumuman" class="bg-primary">
-<div class="container mt-5">
-  <div class="row py-4">
-    <div class="col-md-6">
-    <h4 class="text-white fw-bold">Sarana | Prasarana</h4>
-      <!-- casosul -->
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-
-  <?php 
-  $i = 0;
-
-  include "config/koneksi.php";
-  $query = $conn->query("SELECT * FROM sarana");
-
-while($data = mysqli_fetch_assoc($query)) {?>
-
-  <?php 
-    $active = '';
-    if($i == 0) {
-      $active = 'active';
-    }
-  ?>
-
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="<?php echo $active; ?>"></button>
-
-<?php } $i++; ?>
-
-  </div>
-  <div class="carousel-inner">
-
-    <?php 
-    include "config/koneksi.php";
-    $query1 = $conn->query("SELECT * FROM sarana ORDER BY id_sapra DESC");
-    $i = 0;
-    while ($data1 = mysqli_fetch_assoc($query1)) { ?>
-    
-      <?php 
-      $active = '';
-      if($i == 0){
-        $active = 'active';
-      }
-      ?>
-
-    <div class="carousel-item <?php echo $active; ?>">
-      <img src="img/sarana/<?= $data1['foto']; ?>" class="d-block w-100" height="400">
-    </div>
-    
-    <?php $i++;} ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarana | Prasarana</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- konten -->
+    <section id="pengumuman">
+        <div class="container mt-5">
+            <div class="row py-4">
+                <div class="col-md-6 mx-auto">
+                    <h4 class="fw-bold text-center">Sarana | Prasarana</h4>
+                    <!-- carousel -->
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <?php 
+                            $i = 0;
+                            include "config/koneksi.php";
+                            $query = $conn->query("SELECT * FROM sarana");
+                            while($data = mysqli_fetch_assoc($query)) {
+                                $active = $i == 0 ? 'active' : '';
+                                echo '<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="' . $i . '" class="' . $active . '"></button>';
+                                $i++;
+                            }
+                            ?>
+                        </div>
+                        <div class="carousel-inner">
+                            <?php 
+                            $query1 = $conn->query("SELECT * FROM sarana ORDER BY id_sapra DESC");
+                            $i = 0;
+                            while ($data1 = mysqli_fetch_assoc($query1)) {
+                                $active = $i == 0 ? 'active' : '';
+                                echo '
+                                <div class="carousel-item ' . $active . '">
+                                    <img src="img/sarana/' . $data1['foto'] . '" class="d-block w-100" height="400" alt="' . $data1['nama_sapra'] . '">
+                                </div>';
+                                $i++;
+                            }
+                            ?>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- konten -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
 
     
   </div>
