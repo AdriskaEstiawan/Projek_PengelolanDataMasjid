@@ -50,7 +50,7 @@
               <a class="nav-link active" href="?page=kontak">Kontak Kami</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link active" href="login.php">Login</a>
+              <a class="nav-link active" href="logout.php">Logout</a>
             </li>
           </ul>
         </div>
