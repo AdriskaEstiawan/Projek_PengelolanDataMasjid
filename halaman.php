@@ -1,5 +1,5 @@
 
-<div class="akses">
+<div class="akses">GG
 <!-- corosuel -->
 <div class="col-md-12">
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
