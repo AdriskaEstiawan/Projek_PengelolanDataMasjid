@@ -1,4 +1,3 @@
-<!-- active link -->
 <?php
 session_start();
 
@@ -40,6 +39,11 @@ if($page == 'user') {
   $master2 = "active";
   $user = "active";
 }
+if($page == 'dashboard') {
+  $master1 = "menu-open";
+  $master2 = "active";
+  $dashboard = "active";
+}
 ?>
 
 <aside class="main-sidebar sidebar-light-success elevation-4">
@@ -66,10 +70,10 @@ if($page == 'user') {
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->        
           <li class="nav-item">
-            <a href="home1.php" class="nav-link ">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="?page=dashboard" class="nav-link <?= $dashboard; ?>">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-              Dashboard
+                Dashboard
               </p>
             </a>
           </li>
@@ -98,7 +102,7 @@ if($page == 'user') {
             </a>
           </li>
           <li class="nav-item">
-            <a href="?page=keluar" class="nav-link  <?= $keluar; ?>">
+            <a href="?page=keluar" class="nav-link <?= $keluar; ?>">
               <i class="nav-icon fas fa-money-check-alt"></i>
               <p>
                 Kas Keluar
@@ -106,7 +110,7 @@ if($page == 'user') {
             </a>
           </li>
           <li class="nav-item">
-            <a href="?page=masuk"  class="nav-link  <?= $masuk; ?>">
+            <a href="?page=masuk" class="nav-link <?= $masuk; ?>">
               <i class="nav-icon fas fa-money-check-alt"></i>
               <p>
                 Kas Masuk
@@ -114,7 +118,7 @@ if($page == 'user') {
             </a>
           </li>
           <li class="nav-item">
-            <a href="?page=jadwal" class="nav-link  <?= $jadwal?>">
+            <a href="?page=jadwal" class="nav-link <?= $jadwal; ?>">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
                 Jadwal Kajian
@@ -122,7 +126,7 @@ if($page == 'user') {
             </a>
           </li>
           <li class="nav-item">
-            <a href="?page=user" class="nav-link  <?= $user; ?>">
+            <a href="?page=user" class="nav-link <?= $user; ?>">
               <i class="nav-icon fas fa-user-lock"></i>
               <p>
                 User
