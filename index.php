@@ -1,29 +1,3 @@
-<?php 
-include "config/koneksi.php";
-session_start();
-
-if(isset($_SESSION['username'])){
-  header('Location: home1.php'); 
-  exit;
-}
-
-if(isset($_POST['login'])) {
-  $user = htmlspecialchars($_POST['user']);
-  $pass = htmlspecialchars($_POST['pass']); // Menggunakan pass bukan Password
-
-  $query = $conn->query("SELECT * FROM user WHERE username = '$user' AND password = '$pass'");
-
-  if($query->num_rows > 0) {
-    $row = mysqli_fetch_assoc($query);
-    $_SESSION['username'] = $row['username'];
-    $_SESSION['foto'] = $row['foto'];
-    header('location: home1.php');
-    exit; // Penting untuk menghentikan eksekusi script setelah redirect
-  } else {
-    echo "<script>alert('Username atau Password Anda Salah. Silahkan Coba Lagi!');</script>";
-  }
-}
-?>
 
 <!doctype html>
 <html lang="en">
@@ -78,6 +52,30 @@ if(isset($_POST['login'])) {
                     <a href="index.php" class="btn btn-success btn-lg">Batal</a>
                   </div>
                 </form>
+                <?php
+                if (isset($_POST['login'])) {
+                  // Contoh data user dan admin untuk pengujian
+                  $users = [
+                    ['username' => 'admin', 'password' => 'admin', 'role' => 'admin'],
+                    ['username' => 'user', 'password' => 'user', 'role' => 'user']
+                  ];
+
+                  $username = $_POST['user'];
+                  $password = $_POST['pass'];
+
+                  foreach ($users as $user) {
+                    if ($user['username'] == $username && $user['password'] == $password) {
+                      if ($user['role'] == 'admin') {
+                        header("Location: home1.php");
+                      } else {
+                        header("Location: utama.php");
+                      }
+                      exit();
+                    }
+                  }
+                  echo '<div class="alert alert-danger mt-3" role="alert">Username atau Password salah!</div>';
+                }
+                ?>
               </div>
             </div>
           </div>
@@ -86,6 +84,7 @@ if(isset($_POST['login'])) {
     </div>
   </div>
 </section>
+
 <!-- login -->
 
 <script src="boostrap/umd/popper.min.js"></script>
