@@ -58,7 +58,7 @@ if(!isset($_SESSION['username'])){
   </div>
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2022
+    <strong>Copyright &copy; 2024
     </div>
   </footer>
 </div>
