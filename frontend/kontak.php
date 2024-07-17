@@ -1,9 +1,9 @@
 <section class="container mt-5">
     <div class="row mb-4">
-        <div class="col">
-            <h4 class="fw-bold">DKM Masjid Al-Furqon</h4>
-            <div class=" mt-5 mx-auto" style="width: 18rem;">
-            <img src="img/sosial/logo2.png" class="card-img-top">
+        <div class="col text-center">
+            <h4 class="fw-bold position-relative" style="z-index: 1;">DKM Masjid Al-Furqon</h4>
+            <div class="position-relative mt-5 mx-auto" style="width: 18rem;">
+                <img src="img/sosial/logo2.png" class="card-img-top" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 0;">
             </div>
         </div>
         <div class="col">

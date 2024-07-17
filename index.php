@@ -42,7 +42,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="?page=kontak">Kontak Kami</a>
-        </li>
+        </li> 
         <li class="nav-item">
           <a class="nav-link active" href="login.php">Login</a>
         </li>
