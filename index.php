@@ -102,15 +102,15 @@
 
       <!-- batas -->
       <div class="col">
-        <h4>Q.S At-Taubah: 18</h4>
-        <p>“Sesungguhnya yang memakmurkan masjid Allah hanyalah orang-orang yang beriman kepada Allah dan hari akhir, serta (tetap) menegakkan shalat, menunaikan zakat dan tidak takut kecuali hanya kepada Allah. Maka mudah-mudahan mereka termasuk orang-orang yang mendapat petunjuk.”</p>
+        <h4>Q.S Al-jin(72): 18</h4>
+        <p>“Dan sesungguhnya mesjid-mesjid itu adalah kepunyaan Allah. Maka janganlah kamu menyembah seseorangpun di dalamnya di samping (menyembah) Allah.”</p>
       </div>
 
       <!-- batas -->
     </div>
   </div>
   <div class="copy pt-5 text-center">
-    Copyright &copy; 2022 by Al-Furqon
+    Copyright &copy; 2024 by Al-Furqon
   </div>
 </footer>
 
