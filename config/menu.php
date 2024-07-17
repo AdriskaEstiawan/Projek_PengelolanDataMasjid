@@ -45,7 +45,7 @@ if($page == 'user') {
 <aside class="main-sidebar sidebar-light-success elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link  text-center">
-      <span class="brand-text font-weight-light text-success font-weight-bold">Al-Furqon</span>
+      <span class="brand-text font-weight-light text-success font-weight-bold" style="font-family: Century Schoolbook, sans-serif;"><b>SIMASJID</b></span>
     </a>
 
     <!-- Sidebar -->
@@ -66,7 +66,7 @@ if($page == 'user') {
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->        
           <li class="nav-item">
-            <a href="home1.php" class="nav-link active">
+            <a href="home1.php" class="nav-link ">
             <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
               Dashboard
