@@ -1,121 +1,93 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="boostrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="boostrap/css/style.css">
-<title>Al - Furqon</title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="boostrap/css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="boostrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="boostrap/css/style.css">
+  <title>Halaman Login</title>
 </head>
 <body>
-<!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
-  <div class="container pb-1">
-    <a class="navbar-brand fs-3 fw-bold" href="#">
-    <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
-  </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse isi" id="navbarNav">
-      <ul class="navbar-nav ms-auto ps-4">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        </li>
-        <div class="btn-group">
-          <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-            Menu
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-            <li><a class="dropdown-item" href="?page=jadwal">Jadwal Kajian</a></li>
-            <li><a class="dropdown-item" href="?page=organisasi">Struktur Organisas DKM</a></li>
-          </ul>
-        </div>
-        <!-- batad -->  
-        <li class="nav-item">
-          <a class="nav-link active" href="?page=kegiatan">Kegiatan</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="?page=sarana">Sarana</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="?page=kontak">Kontak Kami</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link active" href="login.php">Login</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- navbar -->
 
-<!-- konten -->
-<?php 
- error_reporting (E_ALL ^ (E_NOTICE | E_WARNING)); //notif error
+<!-- login -->
+<section class="vh-100 bg-success">
+  <div class="container py-1 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="img/login.jpg"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 590px;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <form action="" method="POST">
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <a class="navbar-brand" href="index.php">
+                      <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
+                    </a>
+                  </div>
+                  <h5 class="fw-normal mb-3 pb-3" style="font-family: Ramaraja, sans-serif;">Silahkan Login</h5>
+                  <div class="form-outline mb-4">
+                    <div class="form-floating">
+                      <input id="username" type="text" class="form-control" name="user" placeholder="" required>
+                      <label for="username">Username</label>
+                    </div>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <div class="form-floating">
+                      <input id="password" type="password" class="form-control" name="pass" placeholder="" required>
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end pt-1 mb-4">
+                    <button class="btn btn-primary btn-lg mr-2" type="submit" name="login">Login</button>
+                    <div style="width: 10px;"></div> <!-- Spacer kosong, bisa disesuaikan dengan kebutuhan -->
+                    <a href="index.php" class="btn btn-success btn-lg">Batal</a>
+                  </div>
+                </form>
+                <?php
+                if (isset($_POST['login'])) {
+                  // Contoh data user dan admin untuk pengujian
+                  $users = [
+                    ['username' => 'admin', 'password' => 'admin', 'role' => 'admin'],
+                    ['username' => 'user', 'password' => 'user', 'role' => 'user']
+                  ];
 
-  if($_GET['page'] == ''){
-    include "halaman.php";
-  } 
-  else if($_GET['page'] == 'jadwal'){
-    include 'frontend/jadwal.php';
-  }
-  else if($_GET['page'] == 'organisasi'){
-    include 'frontend/organisasi.php';
-  }
-  else if($_GET['page'] == 'kontak'){
-    include 'frontend/kontak.php';
-  }
-  else if($_GET['page'] == 'kegiatan'){
-    include 'frontend/kegiatan.php';
-  }
-  else if($_GET['page'] == 'sarana'){
-    include 'frontend/sarana.php';
-  }
- 
-?>
-<!-- konten -->
+                  $username = $_POST['user'];
+                  $password = $_POST['pass'];
 
-<!-- about -->
-<footer class="fot mt-5 py-5 text-white">
-  <div class="container">
-    <div class="row">
-      <div class="col ps-1">
-        <h4>Dewan Kemakmuran Masjid</h4>
-        <img src="img/sosial/logo2.png" width="200" height="200" class="d-inline-block align-text-top"> 
-      </div>
-      <!-- batas -->
-      <div class="col">
-        <h4>Hubungi Kami</h4>
-        <p>Jl. Samudra Dumai Barat</p>
-        <p>Tlp. 082284207229</p>
-        <p>Email. Al-Furqon@gmail.com</p>
-          <div class="sosial">
-          <img src="img/sosial/facebook.png" width="40">
-          <img src="img/sosial/instagram.png" width="40">
-          <img src="img/sosial/twitter.png" width="40">
-          <img src="img/sosial/youtube.png" width="40">
+                  foreach ($users as $user) {
+                    if ($user['username'] == $username && $user['password'] == $password) {
+                      if ($user['role'] == 'admin') {
+                        header("Location: home1.php");
+                      } else {
+                        header("Location: utama.php");
+                      }
+                      exit();
+                    }
+                  }
+                  echo '<div class="alert alert-danger mt-3" role="alert">Username atau Password salah!</div>';
+                }
+                ?>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- batas -->
-      <div class="col">
-        <h4>Q.S At-Taubah: 18</h4>
-        <p>“Sesungguhnya yang memakmurkan masjid Allah hanyalah orang-orang yang beriman kepada Allah dan hari akhir, serta (tetap) menegakkan shalat, menunaikan zakat dan tidak takut kecuali hanya kepada Allah. Maka mudah-mudahan mereka termasuk orang-orang yang mendapat petunjuk.”</p>
-      </div>
-
-      <!-- batas -->
     </div>
   </div>
-  <div class="copy pt-5 text-center">
-    Copyright &copy; 2022 by Al-Furqon
-  </div>
-</footer>
+</section>
 
-<!-- about -->
+<!-- login -->
+
 <script src="boostrap/umd/popper.min.js"></script>
 <script src="boostrap/js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
