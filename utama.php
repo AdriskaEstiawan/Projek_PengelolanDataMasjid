@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse isi" id="navbarNav">
           <ul class="navbar-nav ms-auto ps-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+              <a class="nav-link active" aria-current="page" href="utama.php">Home</a>
             </li>
             <div class="btn-group">
               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
