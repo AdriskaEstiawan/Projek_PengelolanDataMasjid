@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,6 +32,7 @@
                       <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
                     </a>
                   </div>
+                  <h4 class="fw-normal mb-3 pb-3" style="font-family: Ramaraja, sans-serif;">Selamat Datang di Website Kami</h4>
                   <h5 class="fw-normal mb-3 pb-3" style="font-family: Ramaraja, sans-serif;">Silahkan Login</h5>
                   <div class="form-outline mb-4">
                     <div class="form-floating">
