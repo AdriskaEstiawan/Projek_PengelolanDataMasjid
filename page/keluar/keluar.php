@@ -1,10 +1,4 @@
-<?php 
-session_start();
-if(!isset($_SESSION['username'])){
-  header('Location: login.php'); 
-  exit;
-}
-?>
+
 <div class="card">
 <div class="card-header">
 <a href="?page=tambahKa" class="btn btn-success btn-sm">Tambah Data</a>
