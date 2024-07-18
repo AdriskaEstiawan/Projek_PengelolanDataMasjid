@@ -1,10 +1,4 @@
-<?php 
-session_start();
-if(!isset($_SESSION['username'])){
-  header('Location: login.php'); 
-  exit;
-}
-?>
+
 <div class="container">
     <div class="row">
     <div class="col-12">
