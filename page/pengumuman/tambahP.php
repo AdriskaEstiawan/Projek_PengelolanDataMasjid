@@ -1,49 +1,7 @@
-<section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">Halaman Tambah Data Pengumuman</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form action="" method="POST" enctype="multipart/form-data">
-                <div class="card-body">
-                <div class="form-group">
-                    <label>Judul</label>
-                    <input type="text" required="" class="form-control" name="jdl">                 
-                  </div>
-                <div class="form-group">
-                    <label>Keterangan</label>
-                    <textarea name="ktrg" class="form-control" cols="4" rows="5"></textarea>                 
-                  </div>
-                  <div class="form-group">
-                    <label>Tanggal</label>
-                    <input type="date" required="" class="form-control" name="tgl">
-                  </div>
-                  <div class="form-group">
-                    <label>Foto</label>
-                    <input type="file" name="foto" accept="image/*" class="form-control">  
-                  </div>
-                </div>
-                <!-- /.card-body -->
+<?php
+include("koneksi.php");
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-success" name="saveP">Tambah</button>
-                </div>
-              </form>
-            </div>
-            <!-- /.card -->
-          </div>
-        </div>
-      </div>
-</section>
-<?php 
-if(isset($_POST['saveP'])) {
-  
+if (isset($_POST['saveP'])) {
     $jdl = $_POST['jdl'];
     $tgl = $_POST['tgl'];
     $pengumuman = $_POST['ktrg'];
@@ -53,21 +11,71 @@ if(isset($_POST['saveP'])) {
     $dir = 'img/kegiatan/';
     $tmpfile = $_FILES['foto']['tmp_name'];
 
-    move_uploaded_file($tmpfile, $dir.$foto);
+    // Move the uploaded file
+    if (move_uploaded_file($tmpfile, $dir . $foto)) {
+        $query = "INSERT INTO pengumuman (judul, isi_pengumuman, tgl, foto) VALUES ('$jdl', '$pengumuman', '$tgl', '$foto')";
 
-    $result = $conn->query("INSERT INTO pengumuman(judul,isi_pengumuman,tgl,foto) VALUES ('$jdl','$pengumuman','$tgl','$foto')")or die(mysqli_connect_error($conn));
-
-    if($result > 0) {
-        echo "<script>
-                document.location.href= '?page=kegiatan';  
-              </script>";
+        if ($conn->query($query) === TRUE) {
+            echo "<script>
+                    alert('Data Berhasil Ditambahkan');
+                    window.location.href='home1.php?page=kegiatan';
+                  </script>";
+        } else {
+            echo "<script>
+                    alert('Gagal Menambahkan Data');
+                  </script>";
+            echo "Error: " . $query . "<br>" . $conn->error;
+        }
     } else {
-        echo "Gagal Menambahkan data";
+        echo "<script>
+                alert('Gagal Mengupload File');
+              </script>";
     }
 
-
+    $conn->close();
 }
-
-
-
 ?>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Halaman Tambah Data Pengumuman</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Judul</label>
+                                <input type="text" required class="form-control" name="jdl">
+                            </div>
+                            <div class="form-group">
+                                <label>Keterangan</label>
+                                <textarea name="ktrg" class="form-control" cols="4" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal</label>
+                                <input type="date" required class="form-control" name="tgl">
+                            </div>
+                            <div class="form-group">
+                                <label>Foto</label>
+                                <input type="file" name="foto" accept="image/*" class="form-control">
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success" name="saveP">Tambah</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+    </div>
+</section>
