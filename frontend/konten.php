@@ -44,7 +44,7 @@
           <a class="nav-link active" href="../utama.php?page=kegiatan">Kegiatan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../index.php?page=sarana">Sarana</a>
+          <a class="nav-link active" href="../utama.php?page=sarana">Sarana</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="../index.php?page=kontak">Kontak Kami</a>
