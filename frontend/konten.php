@@ -34,14 +34,14 @@
             Menu
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-            <li><a class="dropdown-item" href="../index.php?page=jadwal">Jadwal Kajian</a></li>
+            <li><a class="dropdown-item" href="../utama.php?page=jadwal">Jadwal Kajian</a></li>
             <li><a class="dropdown-item" href="#">Rekapitulasi kas Masjid</a></li>
-            <li><a class="dropdown-item" href="../index.php?page=organisasi">Struktur Organisas DKM</a></li>
+            <li><a class="dropdown-item" href="../utama.php?page=organisasi">Struktur Organisas DKM</a></li>
           </ul>
         </div>
         <!-- batad -->  
         <li class="nav-item">
-          <a class="nav-link active" href="../index.php?page=kegiatan">Kegiatan</a>
+          <a class="nav-link active" href="../utama.php?page=kegiatan">Kegiatan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="../index.php?page=sarana">Sarana</a>
