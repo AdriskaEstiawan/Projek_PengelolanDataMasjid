@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="boostrap/css/style.css">
     <title>Al - Furqon</title>
     <style>
-      /* Tambahkan aturan CSS untuk warna header */
+      /* Unified CSS color for the header */
       .navbar-dark.bg-success {
           background-color: #198754 !important;
+      }
+      .btn-success {
+          background-color: #198754 !important;
+          border-color: #198754 !important;
       }
     </style>
   </head>
@@ -28,7 +32,7 @@
         <div class="collapse navbar-collapse isi" id="navbarNav">
           <ul class="navbar-nav ms-auto ps-4">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+              <a class="nav-link active" aria-current="page" href="utama.php">Home</a>
             </li>
             <div class="btn-group">
               <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
@@ -84,7 +88,7 @@
     <!-- konten -->
 
     <!-- about -->
-    <footer class="fot mt-5 py-5 text-white">
+    <footer class="fot mt-5 py-5 text-white" style="background-color: #000000;">
       <div class="container">
         <div class="row">
           <div class="col ps-1">
