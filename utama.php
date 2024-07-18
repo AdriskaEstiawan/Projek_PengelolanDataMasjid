@@ -23,7 +23,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <div class="container pb-1">
-        <a class="navbar-brand fs-3 fw-bold" href="#">
+        <a class="navbar-brand fs-3 fw-bold" href="utama.php">
           <img src="img/sosial/logo.png" width="250" height="75" class="d-inline-block align-text-top">  
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
